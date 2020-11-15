@@ -1,23 +1,34 @@
-# Getting Started with Create React App
+# Meu Primeiro Projeto com React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Me acompanhe pelo [Linkedin](https://www.linkedin.com/in/gilvanete-silva/).
 
-## Available Scripts
+## Componentes
 
-In the project directory, you can run:
+São funções ou classes de uso funcionais. 
+Os componentes permitem que você divida a IU em partes independentes e reutilizáveis, e pense em cada parte isoladamente.
+Conceitualmente, os componentes são como funções JavaScript. Eles aceitam entradas arbitrárias (chamadas de “adereços”) e retornam elementos React que descrevem o que deve aparecer na tela.
 
-### `npm start`
+### Props e Children
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Props:
+Propriedades ou props é um objeto javascript que passamos como parâmetro para componentes. São as props que nos permite reutilzar components e renderizar diferentes dados em cada um deles.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Como no HTML passamos as props como atributos de tags.
 
-### `npm test`
+Children:
+Children é uma propriedade do objeto props. E assim como no HTML, temos as divs mães que criam uma hierarquia com os elementos filhos. Usando o children podemos modificar dados entre as tags de fechamento e abertura de um elemento.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Consumindo dandos internos
+
+map:
+O objeto Map é um mapa simples de chave/valor. Qualquer valor (objeto e valores primitivos) pode ser usado como uma chave ou um valor.
+Um objeto Map itera seus elementos em ordem de inserção — um loop for...of retorna um array de [chave, valor] para cada iteração.
+
+Deve-se notar que um Map que é um mapa de um objeto, especialmente, um dicionário de dicionários somente irá mapear apenas para a ordem de inserção -- que é aleatória e não ordenada.
+
+Key:
+O método Object.keys() retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço for...in (a diferença é que um laço for-in  enumera propriedades que estejam na cadeia de protótipos).
+Object.keys() retorna um array cujo os  elementos são strings correspondentes para a propriedade enumerável encontrada diretamento sobre o objeto. A ordenação das propriedades é a mesma que a dada pelo loop sobre as propriedades do objeto manualmente.
 
 ### `npm run build`
 
@@ -29,42 +40,82 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Scripts #
+Dentro do projeto recém-criado, você pode executar alguns comandos integrados:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm startou yarn start#
+Executa o aplicativo em modo de desenvolvimento. Abra http: // localhost: 3000 para visualizá-lo no navegador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A página será recarregada automaticamente se você fizer alterações no código. Você verá os erros de compilação e avisos de lint no console.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## O que é react?
 
-## Learn More
+É uma ferramenta que nasceu no Facebook para sincronizar as diferentes informações/atualizações que aconteciam na tela!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Além disso, se tornou bastante popular devido ao fato de permitir o reuso de componentes, fácil manutenção no código e alta performance.smiley
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Documentação oficial do [React](https://pt-br.reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### A tríade do react
 
-### Analyzing the Bundle Size
+Visual: o retorno dos elementos nos componentes
+Funcional: as funções de javascript que dão vida aos componentes
+Estado: Cria o poder de memória nos componentes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Dicionário react
 
-### Making a Progressive Web App
+JSX: XML + Javascript, uma sintaxe que você vai estranhar no início, mas que facilita muito nossa vida. É html dentro do javascript.
+Elemento: tags html que retornam de um componente
+Componente: códigos isolados, independentes e reutilizáveis, podem ser funcões ou classes.
+SPA: Single page application que esse conceito de gerar experiência para os usuários, atualizando partes do código em vez da página inteira.
+Props: propriedades que passamos para componentes.
+Estado: memória para manipular dados em componentes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Arquitetura
 
-### Advanced Configuration
+Estrutura de pastas recomendada para um projeto em react. Importante lembrar que não precisamos criar todas as pastas, elas surgem automaticamente quando usamos o npx create-react-app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+node_modules:
+Aqui ficam salvos todos os pacotes de dependências que precisamos para fazer a sintaxe react funcionar.
 
-### Deployment
+public:
+index.html
+Aqui está nosso html que recebe todos os códigos para mostrar na tela.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+src
+index.js
+Aqui ficam as principais importações do react e o ReactDOM.render() que é responsável por mandar nossos componentes para o html.
 
-### `npm run build` fails to minify
+app.js
+Aqui fica nosso principal componente, que centraliza as outras funcionalidades/páginas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Components
+Aqui criamos nossos arquivos de componentes. :)
+
+Pages
+Aqui criamos nossos arquivos de páginas que recebem os componentes.
+
+Route
+Aqui criamos o arquivo de navegação das nossas páginas.
+
+Services
+Aqui criamos os arquivos onde podemos consumir dados de api.
+
+Styles
+Aqui podemos criar todos os estilos de nossos arquivos, desde o global que importamos para o app.js, até por component ou por page que importamos em cada arquivo relacionado.
+
+Assets
+Aqui salvamos todos os arquivos de imagens.
+
+### Biblioteca ou Framework?
+
+React é uma biblioteca para criação de interface de usuários.
+
+Framework é uma coleção de bibliotecas.
+
+A diferença fica explícita quando percebemos que ao usar uma lib/biblioteca podemos usar em parte do projeto e ainda refatorar para excluir a lib e o projeto continua. Já na utilização de frameworks a gente precisaria reiniciar o projeto do zero.
+
+Um guia para iniciantes: (https://www.hostinger.com.br/tutoriais/o-que-e-react-javascript#:~:text=O%20React%20%C3%A9%20a%20biblioteca,ferramenta%20foram%20desenvolvidos%20pelo%20Facebook.)
